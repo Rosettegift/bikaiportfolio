@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bikaï Anastazia Rosette Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* On force la structure en 2 colonnes */
+    .accueil-container {
+      display: flex !important;
+      flex-direction: row !important; /* Force l'alignement horizontal */
+      align-items: center !important;
+      justify-content: space-between !important;
+      min-height: 100vh !important;
+      padding: 100px 5% 0 5% !important;
+      gap: 3rem !important;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Le texte prend 50% de la place */
+    .text-box {
+      width: 50% !important;
+      max-width: 50% !important;
+      text-align: left !important;
+    }
+
+    /* La photo prend l'autre 50% */
+    .image-box {
+      width: 50% !important;
+      max-width: 50% !important;
+      display: flex !important;
+      justify-content: flex-end !important;
+    }
+
+    .image-box img {
+      width: 100% !important;
+      height: 80vh !important;
+      object-fit: cover !important;
+      border-radius: 20px !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(233, 69, 96, 0.2) !important;
+    }
+  </style>
+</head>
+<body class="page-accueil">
+
+  <!-- FOND ANIMÉ -->
+  <div class="tech-background">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- MENU -->
+  <nav class="navbar">
+    <div class="logo">Mlle Anastazia Rosette Bikaï</div>
+    <div class="nav-buttons">
+      <a href="index.html" class="nav-btn active">Accueil</a>
+      <a href="apropos.html" class="nav-btn">À propos</a>
+      <a href="ecole.html" class="nav-btn">Parcours Academique</a>
+      <a href="business.html" class="nav-btn">Business</a>
+      <a href="sport.html" class="nav-btn">Sport</a>
+    </div>
+  </nav>
+
+  <!-- STRUCTURE -->
+  <section class="accueil-container">
+    
+    <!-- TEXTE A GAUCHE -->
+    <div class="text-box fade-in-up">
+      <h1 style="font-size: 3.5rem; line-height: 1.1; color: #fff; font-weight: 800; margin-bottom: 0.5rem;">
+        Bikaï Anastazia<br>Rosette</br>
+      </h1>
+      
+      <p class="subtitle" style="font-size: 1rem; color: #e94560; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem;">
+        Étudiante en IA · Entrepreneuse · Arbitre de football
+      </p>
+      
+      <p style="font-size: 1.1rem; color: #a0a0a0; margin-bottom: 2.5rem; line-height: 1.8;">
+        Étudiante en Intelligence Artificielle, entrepreneuse et arbitre de football.<br>
+        Je construis, je vends, je décide avec rigueur et passion.<br><br>
+        Bienvenue dans mon univers.
+      </p>
+      
+      <div style="display: flex; gap: 1rem;">
+        <a href="https://wa.me/237683245860" target="_blank" style="padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; background-color: #25D366; color: #fff;">WhatsApp</a>
+        <a href="mailto:rosetteanastazia@gmail.com" style="padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; background-color: #e94560; color: #fff;">Email</a>
+      </div>
+    </div>
+
+    <!-- PHOTO A DROITE -->
+    <div class="image-box fade-in-up">
+      <img src="images/pp.jpeg" alt="Bikaï Anastazia Rosette">
+    </div>
+
+  </section>
+
+  <footer style="text-align: center; padding: 2rem; color: #666; position: relative; z-index: 10;">
+    <p>© 2026 Bikaï Anastazia Rosette <a href="mailto:rosetteanastazia@gmail.com" style="color: #e94560;">rosetteanastazia@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>

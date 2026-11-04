@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets Académiques — Bikaï Anastazia Rosette</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <!-- STYLE PROPRE POUR CETTE PAGE -->
+  <style>
+    .page-ecole-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 150px 2rem 4rem 2rem;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .page-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .page-title h1 {
+      font-size: 3rem;
+      color: #fff;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .page-title p {
+      color: #e94560;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+    }
+
+    /* LE STYLE DES CARTES (Très pro) */
+    .projet-card {
+      background: rgba(255, 255, 255, 0.03); /* Fond très léger */
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .projet-card h3 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .projet-card .meta {
+      color: #e94560;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .projet-card p {
+      color: #a0a0a0;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    
+    .projet-card ul {
+      color: #a0a0a0;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    /* LES IMAGES */
+    .projet-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .projet-images figure {
+      flex: 1;
+      min-width: 250px;
+      background: #111;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .projet-images img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: contain; /* L'image est entière, pas coupée */
+      background: #000;
+    }
+    .projet-images figcaption {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888;
+      padding: 10px;
+    }
+
+    /* ANIMATION (Apparition en cascade) */
+    .element-anime {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .element-anime.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="page-accueil">
+
+  <div class="tech-background">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="logo">Mlle Anastazia Rosette Bikaï</div>
+    <div class="nav-buttons">
+      <a href="index.html" class="nav-btn">Accueil</a>
+      <a href="apropos.html" class="nav-btn">À propos</a>
+      <a href="ecole.html" class="nav-btn active">Projets Academiques</a>
+      <a href="business.html" class="nav-btn">Business</a>
+      <a href="sport.html" class="nav-btn">Sport</a>
+    </div>
+  </nav>
+
+  <div class="page-ecole-container">
+    
+    <header class="page-title element-anime">
+      <h1>Parcours Academique</h1>
+      <p>Bachelor 3 IABD : Mes projets académiques</p>
+    </header>
+        <!-- ========================================== -->
+    <!-- TON PARCOURS SCOLAIRE (TIMELINE)           -->
+    <!-- ========================================== -->
+    <div class="element-anime" style="margin-bottom: 4rem; background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05);">
+      <h2 style="color: #fff; font-size: 1.8rem; margin-bottom: 2rem;">Mon Parcours Scolaire</h2>
+      
+      <div style="border-left: 2px solid #e94560; padding-left: 1.5rem; margin-left: 0.5rem;">
+        
+        <!-- Étape 1 : Bac -->
+        <div style="margin-bottom: 2rem; position: relative;">
+          <div style="position: absolute; left: -1.95rem; top: 5px; width: 14px; height: 14px; background: #e94560; border-radius: 50%;"></div>
+          <h3 style="color: #fff; font-size: 1.2rem;">2024 — Baccalauréat Série D</h3>
+          <p style="color: #e94560; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem;">Collège Dauphine 2</p>
+          <p style="color: #a0a0a0; font-size: 0.95rem;">Obtention de mon Baccalauréat scientifique, posant les bases de ma rigueur et de ma logique.</p>
+        </div>
+
+        <!-- Étape 2 : Tronc Commun -->
+        <div style="margin-bottom: 2rem; position: relative;">
+          <div style="position: absolute; left: -1.95rem; top: 5px; width: 14px; height: 14px; background: #e94560; border-radius: 50%;"></div>
+          <h3 style="color: #fff; font-size: 1.2rem;">2024 - 2026 — Tronc Commun Informatique</h3>
+          <p style="color: #e94560; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem;">Keyce Informatique et Intelligence Artificielle</p>
+          <p style="color: #a0a0a0; font-size: 0.95rem;">Bachelor 1 & 2. Apprentissage intensif des fondamentaux de l'informatique : algorithmique, programmation (Python, C#), bases de données et architecture des systèmes.</p>
+        </div>
+
+        <!-- Étape 3 : Bachelor 3 -->
+        <div style="position: relative;">
+          <div style="position: absolute; left: -1.95rem; top: 5px; width: 14px; height: 14px; background: #e94560; border-radius: 50%;"></div>
+          <h3 style="color: #fff; font-size: 1.2rem;">2026 - 2027 — Intelligence Artificielle & Big Data</h3>
+          <p style="color: #e94560; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem;">Keyce Informatique et Intelligence Artificielle (Bachelor 3)</p>
+          <p style="color: #a0a0a0; font-size: 0.95rem;">Spécialisation en Machine Learning, analyse de données massives et conception de modèles intelligents.</p>
+        </div>
+
+      </div>
+    </div>
+    <!-- ========================================== -->
+
+    <!-- PROJET 1 -->
+
+    <!-- PROJET 1 -->
+    <div class="projet-card element-anime">
+      <h3>Application de gestion bancaire</h3>
+      <p class="meta">Projet tutoré Niveau 1 · Travail en équipe</p>
+      <p>Conception d'une application de gestion de comptes bancaires en C# dans le cadre d'un projet tutoré. Modélisation des clients, des comptes et des opérations.</p>
+      <ul>
+        <li>Programmation orientée objet</li>
+        <li>Modélisation des données et logique métier</li>
+        <li>Travail collaboratif en équipe</li>
+      </ul>
+      <div class="projet-images">
+        <figure>
+          <img src="images/ecole_banque.jpg" alt="Capture de l'application bancaire">
+          <figcaption>Interface de l'application (C#)</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- PROJET 2 -->
+    <div class="projet-card element-anime">
+      <h3>Projet GitHur Tronc Commun Informatique</h3>
+      <p class="meta">Projet de Niveau 1 Réalisé en tronc commun informatique</p>
+      <p>Réalisation d'un projet de travaux pratique en Github dans le cadre du tronc commun en informatique de niveau 1. Ce projet nous a permis de mettre en pratique les notions de base en programmation et en résolution de problèmes.</p>
+      <ul>
+        <li>Niveau : 1ère année (Tronc commun informatique)</li>
+        <li>Travail en équipe et gestion de projet</li>
+      </ul>
+      <div class="projet-images">
+        <figure>
+          <img src="images/projet_groupe_github.png" alt="Aperçu du projet TPGITHUBR">
+          <figcaption>Vue du projet de groupe en Tronc commun Niveau 1</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- PROJET 3 -->
+    <div class="projet-card element-anime">
+      <h3>Création Graphique (Adobe Photoshop)</h3>
+      <p class="meta">Projet scolaire · Design & Communication</p>
+      <p>Apprentissage et maîtrise d'Adobe Photoshop pour la conception de supports de communication visuelle (flyers, affiches).</p>
+      <ul>
+        <li>Retouche d'images et création de visuels</li>
+        <li>Mise en page et choix typographiques</li>
+      </ul>
+      <div class="projet-images">
+        <figure>
+          <img src="images/HOLL.png" alt="Flyer Photoshop 1">
+          <figcaption>Réalisation d'un Hollock</figcaption>
+        </figure>
+        <figure>
+          <img src="images/FF2.jpg" alt="Flyer Photoshop 2">
+          <figcaption>Réalisation d'un flyer de grille de prix</figcaption>
+        </figure>
+        <figure>
+          <img src="images/FF1.jpg" alt="Flyer Photoshop 3">
+          <figcaption>Réalisation d'un flyer Publicitaire</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- PROJET 4 -->
+    <div class="projet-card element-anime">
+      <h3>Algorithmique : Les Arbres de Décisionnel</h3>
+      <p class="meta">Projet réalisé sous Code::Blocks · Application Console</p>
+      <p>Étude et mise en pratique des notions d'arbres de décision vues en cours d'algorithmique. Réalisation d'exercices et de codes en langage C via l'interface Code::Blocks en mode console.</p>
+      <ul>
+        <li>Compréhension des structures de données (arbres)</li>
+        <li>Mise en pratique de la logique algorithmique</li>
+        <li>Exercices codés et exécutés en mode console</li>
+      </ul>
+      <div class="projet-images">
+        <figure>
+          <img src="images/code_algo.png" alt="Code algorithme">
+          <figcaption>Aperçu du code utilisé</figcaption>
+        </figure>
+        <figure>
+          <img src="images/resul.png" alt="Résultat">
+          <figcaption>Aperçu du résultat à l'exécution</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- PROJET 5 -->
+    <div class="projet-card element-anime">
+      <h3>À venir Projets IA</h3>
+      <p class="meta">En cours d'apprentissage</p>
+      <p>Cette section accueillera mes futurs projets en intelligence artificielle : machine learning, analyse de données, chatbots, etc...</p>
+    </div>
+
+    <!-- BOUTONS CONTACT -->
+    <div class="element-anime" style="text-align: center; margin-top: 3rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+      <a href="https://github.com/rosettegift" target="_blank" style="padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; background-color: #fff; color: #000;">Voir mon GitHub</a>
+      <a href="https://wa.me/237683245860" target="_blank" style="padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; background-color: #25D366; color: #fff;">WhatsApp</a>
+      <a href="mailto:rosetteanastazia@gmail.com" style="padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; background-color: #e94560; color: #fff;">Email</a>
+    </div>
+
+  </div>
+
+  <footer style="position: relative; z-index: 10; text-align: center; padding: 2rem; color: #666; margin-top: 4rem;">
+    <p>© 2026 Bikaï Anastazia Rosette — <a href="mailto:rosetteanastazia@gmail.com" style="color: #e94560; text-decoration: none;">rosetteanastazia@gmail.com</a></p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const elements = document.querySelectorAll('.element-anime');
+      elements.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add('visible');
+        }, 300 + (index * 600)); // Apparition fluide, une par une
+      });
+    });
+  </script>
+
+</body>
+</html>

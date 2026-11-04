@@ -1,0 +1,720 @@
+/* =========================================
+   RESET ET BASE
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #05050a;
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   FOND ANIMÉ (Grille et lumières)
+   ========================================= */
+.tech-background {
+  position: fixed; top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: -1;
+  background-color: #05050a;
+  overflow: hidden;
+}
+
+.glow-orb {
+  position: absolute; border-radius: 50%;
+  filter: blur(100px); opacity: 0.4;
+}
+.orb-1 { width: 500px; height: 500px; background: #e94560; top: -10%; right: -10%; animation: floatOrb 15s infinite alternate ease-in-out; }
+.orb-2 { width: 400px; height: 400px; background: #4a00e0; bottom: -10%; left: -10%; animation: floatOrb 20s infinite alternate-reverse ease-in-out; }
+
+.grid-overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: moveGrid 20s linear infinite;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-50px, 50px) scale(1.2); }
+}
+@keyframes moveGrid {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+.navbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.5rem 5%; position: fixed; top: 0; width: 100%; z-index: 100;
+  background: rgba(5, 5, 10, 0.7); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo { font-size: 1.1rem; font-weight: 600; color: #fff; }
+.nav-buttons { display: flex; gap: 10px; }
+
+.nav-btn {
+  text-decoration: none; color: #a0a0a0; font-size: 0.85rem;
+  padding: 8px 16px; border-radius: 20px; border: 1px solid transparent; transition: all 0.3s ease;
+}
+.nav-btn:hover, .nav-btn.active {
+  color: #fff; background: rgba(233, 69, 96, 0.1); border-color: #e94560;
+  box-shadow: 0 0 15px rgba(233, 69, 96, 0.3);
+}
+
+/* =========================================
+   STRUCTURE EN 2 COLONNES (Photo à gauche, Texte à droite)
+   ========================================= */
+
+.hero-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 120px 10% 0 10%;
+  gap: 5rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* --- La photo à gauche --- */
+.hero-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; /* Colle la photo à gauche */
+  height: 80vh;
+}
+
+.hero-photo {
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(233, 69, 96, 0.2);
+}
+
+/* --- Le texte à droite --- */
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.hero-text .subtitle {
+  font-size: 1rem;
+  color: #e94560;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text .description {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+/* =========================================
+   BOUTONS
+   ========================================= */
+.social-buttons {
+  display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; /* Centre les boutons */
+}
+
+.btn {
+  padding: 0.8rem 1.8rem; border-radius: 8px; text-decoration: none;
+  font-weight: 600; transition: all 0.3s ease; font-size: 0.9rem;
+}
+
+.btn-social {
+  background: rgba(255, 255, 255, 0.05); color: #fff; 
+  border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(5px);
+}
+
+.btn-social:hover {
+  border-color: #e94560; color: #e94560; transform: translateY(-2px); background: rgba(233, 69, 96, 0.1);
+}
+
+/* =========================================
+   IMAGE
+   ========================================= */
+.hero-image-wrapper {
+  flex: 1; /* Prend l'autre moitié de l'espace */
+  display: flex;
+  justify-content: flex-end; /* Colle la photo à droite */
+  align-items: center;
+  height: 100%; /* Prend toute la hauteur */
+}
+
+.hero-photo {
+  width: 100%;
+  max-width: 450px; /* Largeur max de la photo */
+  height: 80vh; /* La photo prend 80% de la hauteur de l'écran */
+  object-fit: cover; /* Remplit le cadre sans déformer */
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(233, 69, 96, 0.2);
+}
+
+
+/* =========================================
+   ANIMATION D'APPARITION (Fade In Up)
+   ========================================= */
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive mobile */
+@media (max-width: 900px) {
+.hero-split {
+  display: flex;
+  align-items: center; /* Aligne le texte et la photo au milieu verticalement */
+  justify-content: space-between;
+  min-height: 100vh; /* Prend toute la hauteur de l'écran */
+  padding: 0 5%; /* Réduit un peu les marges sur les côtés */
+  gap: 4rem;
+  position: relative;
+  z-index: 10;
+}
+  .navbar { flex-direction: column; gap: 1rem; }
+  .hero-text h1 { font-size: 2.5rem; }
+}
+.hero-text {
+  flex: 1; /* Prend la moitié de l'espace */
+  max-width: 600px;
+  text-align: left; /* Aligne à gauche */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* =========================================
+  BOUTONS AVEC COULEURS
+   ========================================= */
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Aligne les boutons à gauche */
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: inline-block;
+  border: none;
+}
+
+/* Bouton WhatsApp : Vert officiel */
+.btn-whatsapp {
+  background-color: #25D366; 
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+  background-color: #1da851;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+/* Bouton Email : Ta couleur Rose */
+.btn-email {
+  background-color: #e94560; 
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+}
+
+.btn-email:hover {
+  background-color: #c73652;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(233, 69, 96, 0.5);
+}
+
+/* =========================================
+   PAGE À PROPOS (DESIGN 2 COLONNES)
+   ========================================= */
+
+.about-layout {
+  display: flex;
+  gap: 4rem; 
+  align-items: center; /* Centre la photo et le texte sur la même ligne */
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.about-layout {
+  display: flex;
+  gap: 4rem; 
+  align-items: center; /* Centre la photo et le texte sur la même ligne */
+  text-align: left;
+  margin-top: 2rem;
+}
+
+/* La colonne de gauche (Photo) */
+.about-image-col {
+  flex: 0 0 350px; 
+}
+
+.about-photo {
+  width: 100%;
+  max-width: 350px; /* Ajuste la taille de la photo ici */
+  height: auto;
+  border-radius: 20px; 
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(233, 69, 96, 0.2);
+}
+
+/* La colonne de droite (Texte) */
+.about-text-col {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+/* Animation d'apparition fluide */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-text-col p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #a0a0a0; /* Gris clair pour le texte */
+  margin-bottom: 1.2rem;
+}
+
+.about-text-col strong {
+  color: #ffffff; /* Met les mots importants en blanc pur */
+}
+
+.about-text-col .intro-text {
+  font-size: 1.15rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+/* Le message de fin */
+.about-conclusion-box {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.about .conclusion {
+  border-left: 4px solid #e94560;
+  padding-left: 1.5rem;
+  color: #a0a0a0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+/* Responsive téléphone */
+@media (max-width: 768px) {
+  .about-layout {
+    flex-direction: column; 
+    text-align: center; 
+    gap: 2rem;
+  }
+  .about-image-col {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  .about .conclusion {
+    border-left: none;
+    border-top: 3px solid #e94560;
+    padding-left: 0;
+    padding-top: 1rem;
+    text-align: center;
+  }
+}
+
+/* =========================================
+   DÉFILEMENT FLUIDE (SMOOTH SCROLL)
+   ========================================= */
+html {
+  scroll-behavior: smooth; /* C'est la ligne magique qui rend le défilement fluide */
+}
+
+/* On s'assure que les sections ont de l'espace et une hauteur minimum */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* Ajustement pour que le menu fixe ne cache pas le haut des sections */
+#accueil, #apropos, #ecole, #business, #sport {
+  scroll-margin-top: 100px;
+}
+
+/* =========================================
+   INDICATEUR DE SCROLL (Flèche animée)
+   ========================================= */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column;
+  align-items: center; gap: 10px;
+  opacity: 0.7; font-size: 0.8rem; color: #fff;
+  z-index: 20;
+}
+
+.arrow {
+  width: 15px; height: 15px;
+  border-right: 2px solid #e94560;
+  border-bottom: 2px solid #e94560;
+  transform: rotate(45deg);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0) rotate(45deg); }
+  40% { transform: translateY(-10px) rotate(45deg); }
+  60% { transform: translateY(-5px) rotate(45deg); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+#accueil, #apropos, #ecole, #business, #sport {
+  scroll-margin-top: 100px; 
+}
+
+
+/* L'animation de base : plus lente (1.5s au lieu de 0.8s) */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  /* L'animation dure maintenant 2.5 secondes */
+  animation: slideUp 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- LES DÉLAIS (à ajouter dans ton HTML) --- */
+
+/* Le titre apparaît après 0.5s */
+.delay-1 { animation-delay: 0.5s; }
+
+/* La description apparaît après 2s (le temps de lire le titre) */
+.delay-2 { animation-delay: 2s; }
+
+/* Les boutons apparaissent après 3.5s */
+.delay-3 { animation-delay: 3.5s; }
+
+/* La photo apparaît après 4.5s */
+.delay-4 { animation-delay: 4.5s; }
+
+    <!-- TEXTE A GAUCHE -->
+    <div id="mon-texte">
+      <h1 class="fade-in-up delay-1" style="...">Bikaï Anastazia...</h1>
+      <p class="fade-in-up delay-2" style="...">Étudiante en Intelligence...</p>
+      <div class="fade-in-up delay-3" style="...">[Boutons]</div>
+    </div>
+
+    <!-- PHOTO A DROITE -->
+    <div id="mon-image-box" class="fade-in-up delay-4">
+      <img src="images/pp.jpeg" alt="...">
+    </div>
+
+/* =========================================
+   CORRECTION DU CARROUSEL BUSINESS (Images entières)
+========================================= */
+
+.carrousel-articles {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+}
+
+.article-item {
+  flex: 0 0 auto;
+  width: 220px; /* Largeur de la carte */
+  background: rgba(255, 255, 255, 0.03); /* Fond sombre transparent */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-item img {
+  width: 100%;
+  height: 200px; /* Hauteur fixe pour l'image */
+  object-fit: contain; /* C'EST LA LIGNE MAGIQUE : L'image est entière, pas coupée */
+  background-color: #fff; /* Fond blanc derrière l'image pour bien la voir */
+  padding: 10px; /* Un peu d'espace autour de l'image */
+}
+
+.article-item p {
+  font-size: 0.85rem;
+  color: #e0e0e0;
+  padding: 15px 10px;
+  text-align: center;
+  margin: 0;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limite le texte à 3 lignes max */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* =========================================
+   PAGE BUSINESS (Design Pro & Animé)
+   ========================================= */
+
+.container-business {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 150px 2rem 4rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* En-tête de la page */
+.header-business {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.header-business h1 {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 800;
+  margin: 0;
+}
+.header-business p {
+  color: #e94560;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* La grande carte */
+.carte-business {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* En-tête ANA'S SHOP */
+.entete-anas-shop {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.entete-anas-shop img {
+  max-width: 120px;
+  border-radius: 15px;
+}
+.entete-anas-shop h3 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 1rem 0 0.5rem 0;
+}
+.sous-titre-anas {
+  color: #e94560;
+  font-weight: 600;
+  margin: 0;
+}
+.description-anas {
+  color: #a0a0a0;
+  max-width: 600px;
+  margin: 0.5rem auto 0 auto;
+}
+
+.titre-articles {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 2rem 0 1rem 0;
+}
+
+/* LA GRILLE D'ARTICLES (C'est ça que tu veux) */
+.grille-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+  margin-top: 1.5rem;
+}
+
+.carte-article {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.carte-article:hover {
+  transform: translateY(-5px);
+}
+
+.carte-article img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain; /* L'image est entière ! */
+  background: #fff;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.carte-article p {
+  padding: 10px;
+  color: #333;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* En-tête Boostage */
+.entete-boost {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.entete-boost h3 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+}
+.entete-boost p {
+  color: #e94560;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Galerie Boostage */
+.galerie-boost {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.galerie-boost figure {
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  margin: 0;
+  max-width: 300px;
+  width: 100%;
+}
+.galerie-boost img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+.galerie-boost figcaption {
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer-business {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  position: relative;
+  z-index: 10;
+}
+.footer-business a {
+  color: #e94560;
+  text-decoration: none;
+}
+
+/* L'ANIMATION (Invisible au début, puis apparaît) */
+.element-anime {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.element-anime.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <script>
+    // Force la page à revenir tout en haut à chaque chargement
+        window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+    </script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business — Bikaï Anastazia Rosette</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="page-accueil" onload="window.scrollTo(0, 0);">
+
+  <!-- FOND ANIMÉ -->
+  <div class="tech-background">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="logo">Mlle Anastazia Rosette Bikaï</div>
+    <div class="nav-buttons">
+      <a href="index.html" class="nav-btn">Accueil</a>
+      <a href="apropos.html" class="nav-btn">À propos</a>
+      <a href="ecole.html" class="nav-btn">Projets Academiques</a>
+      <a href="business.html" class="nav-btn active">Business</a>
+      <a href="sport.html" class="nav-btn">Sport</a>
+    </div>
+  </nav>
+
+  <!-- CONTENEUR PRINCIPAL -->
+  <div class="container-business">
+    
+    <!-- EN-TÊTE -->
+    <header class="header-business element-anime">
+      <h1>Business et Entrepreneuriat</h1>
+      <p>Vendre, conseiller, faire grandir</p>
+    </header>
+
+    <!-- CARTE 1 : ANA'S SHOP -->
+    <div class="carte-business element-anime">
+      
+      <div class="entete-anas-shop">
+        <img src="images/business_shop.jpeg" alt="Logo ANA'S SHOP">
+        <h3>ANA'S SHOP</h3>
+        <p class="sous-titre-anas">Fondatrice & Gérante</p>
+        <p class="description-anas">Découvrez nos meilleurs bons plans : parfums, vêtements et articles technologiques. Commandez directement via WhatsApp.</p>
+      </div>
+
+      <h4 class="titre-articles">Nos articles disponibles :</h4>
+      
+      <!-- LA GRILLE D'ARTICLES -->
+      <div class="grille-articles">
+        <div class="carte-article"><img src="images/vanilla_voyage.jpeg" alt="Parfum"><p>Parfum Vanilla Voyage</p></div>
+        <div class="carte-article"><img src="images/pack_H1.jpeg" alt="Parfum"><p>Pack Homme</p></div>
+        <div class="carte-article"><img src="images/Pack_H2.jpeg" alt="Parfum"><p>Pack Homme</p></div>
+        <div class="carte-article"><img src="images/pack_F1.jpeg" alt="Parfum"><p>Pack Femme</p></div>
+        <div class="carte-article"><img src="images/pack_F2.jpeg" alt="Parfum"><p>Pack Femme</p></div>
+        <div class="carte-article"><img src="images/robe_tendance.jpeg" alt="Vêtement"><p>Robe tendance</p></div>
+        <div class="carte-article"><img src="images/pc_1.jpeg" alt="Tech"><p>Dell XPS</p></div>
+        <div class="carte-article"><img src="images/pc_gamin.jpeg" alt="Tech"><p>PC MSI Gaming</p></div>
+      </div>
+    </div>
+
+    <!-- CARTE 2 : BOOSTAGE -->
+    <div class="carte-business element-anime">
+      <div class="entete-boost">
+        <h3>Boostage réseaux sociaux</h3>
+        <p>Service indépendant</p>
+      </div>
+      
+      <div class="galerie-boost">
+        <figure>
+          <img src="images/business_boost.jpeg" alt="Flyer">
+          <figcaption>Flyer de boostage</figcaption>
+        </figure>
+        <figure>
+          <img src="images/grille_boost.jpeg" alt="Grille">
+          <figcaption>Grille de prix</figcaption>
+        </figure>
+      </div>
+    </div>
+        <!-- BOUTON WHATSAPP EN BAS AU CENTRE -->
+    <div class="element-anime" style="display: flex; justify-content: center; margin-top: 3rem; margin-bottom: 2rem;">
+      <a href="https://wa.me/237692528508" target="_blank" style="padding: 1rem 3rem; border-radius: 8px; text-decoration: none; font-weight: 700; background-color: #25D366; color: #fff; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);">Contacter sur WhatsApp</a>
+    </div>
+
+  </div>
+
+  <footer class="footer-business">
+    <p>© 2026 Bikaï Anastazia Rosette — <a href="mailto:rosetteanastazia@gmail.com">rosetteanastazia@gmail.com</a></p>
+  </footer>
+
+  <!-- SCRIPT POUR L'ANIMATION -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const elements = document.querySelectorAll('.element-anime');
+      elements.forEach((el, index) => {
+        setTimeout(() => { el.classList.add('visible'); }, 300 + (index * 600)); 
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sport — Bikaï Anastazia Rosette</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* L'animation d'apparition */
+    .element-anime {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .element-anime.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="page-accueil">
+
+  <!-- FOND ANIMÉ TECH -->
+  <div class="tech-background">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- NAVIGATION (Mise à jour avec les boutons) -->
+  <nav class="navbar">
+    <div class="logo">Mlle Anastazia Rosette Bikaï</div>
+    <div class="nav-buttons">
+      <a href="index.html" class="nav-btn">Accueil</a>
+      <a href="apropos.html" class="nav-btn">À propos</a>
+      <a href="ecole.html" class="nav-btn">Projets Academiques</a>
+      <a href="business.html" class="nav-btn">Business</a>
+      <a href="sport.html" class="nav-btn active">Sport</a>
+    </div>
+  </nav>
+
+  <!-- EN-TÊTE DE LA PAGE (Animé) -->
+  <header class="page-header element-anime" style="padding-top: 150px; text-align: center; position: relative; z-index: 10;">
+    <h1 style="font-size: 3rem; color: #fff; font-weight: 800;">Arbitre de Football</h1>
+    <p style="color: #e94560; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Saison 2025-2026 - Ligue Départementale du Wouri (LDFW)</p>
+  </header>
+
+  <div class="container" style="position: relative; z-index: 10; padding-bottom: 4rem;">
+
+    <!-- PHOTO PRINCIPALE (Animée) -->
+    <div class="element-anime" style="text-align: center; margin-bottom: 3rem;">
+      <img src="images/pa.jpeg" alt="Photo Bikaï Anastazia Rosette en tenue d'arbitre" style="max-width: 400px; width: 100%; border-radius: 20px; border: 2px solid rgba(255,255,255,0.1); box-shadow: 0 15px 40px rgba(0,0,0,0.5), 0 0 20px rgba(233,69,96,0.2);">
+      <p style="color: #a0a0a0; margin-top: 1rem; font-style: italic;">En tenue d'arbitre</p>
+    </div>
+
+    <!-- CARTE 1 : LDFW (Animée) -->
+    <div class="card element-anime" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 2rem; margin-bottom: 3rem;">
+      <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem;">Ligue Départementale du Football du Wouri (LDFW)</h3>
+      <p class="meta" style="color: #e94560; font-weight: 600; margin-bottom: 1rem;">Saison Sportive 2025-2026 · Arbitre Assistante</p>
+      <p style="color: #a0a0a0; line-height: 1.8; margin-bottom: 1.5rem;">Désignée arbitre pour diriger les rencontres de la Ligue Départementale du Football du Wouri, ainsi que les matchs amicaux et championnats associés.</p>
+
+      <div class="carrousel-sport" style="display: flex; overflow-x: auto; gap: 15px; padding-bottom: 10px;">
+        <figure class="item-sport" style="flex: 0 0 auto; width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/1757688002816.jpg" alt="Match LDFW" style="width: 100%; height: 180px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">Match officiel de la LDFW</figcaption>
+        </figure>
+        <figure class="item-sport" style="flex: 0 0 auto; width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/rencontre1.jpg" alt="Match LDFW" style="width: 100%; height: 180px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">Match officiel de la LDFW</figcaption>
+        </figure>
+        <figure class="item-sport" style="flex: 0 0 auto; width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/wait1.jpg" alt="Match LDFW" style="width: 100%; height: 180px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">Positionnement durant le match</figcaption>
+        </figure>
+        <figure class="item-sport" style="flex: 0 0 auto; width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/decision.jpg" alt="Match LDFW" style="width: 100%; height: 180px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">Prise de décision</figcaption>
+        </figure>
+        <figure class="item-sport" style="flex: 0 0 auto; width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/course.jpg" alt="Match LDFW" style="width: 100%; height: 180px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">Course pendant le match</figcaption>
+        </figure>
+        <figure class="item-sport" style="flex: 0 0 auto; width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/course2.jpg" alt="Match LDFW" style="width: 100%; height: 180px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">Course pendant le match</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- CARTE 2 : FIFA U17 (Animée) -->
+    <div class="card element-anime" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 2rem; margin-bottom: 3rem;">
+      <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem;">CHAMPIONNAT D'ELITE U-17 FECAFOOT/FIFA TDS</h3>
+      <p class="meta" style="color: #e94560; font-weight: 600; margin-bottom: 1rem;">Zone Littoral-Sud-Ouest · Arbitre désignée</p>
+      <p style="color: #a0a0a0; line-height: 1.8; margin-bottom: 1.5rem;">Sélectionnée parmi les arbitres pour diriger les rencontres du CHAMPIONNAT D'ELITE U-17 FECAFOOT/FIFA TDS de la zone Littoral / Sud-Ouest.</p>
+      
+      <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+        <figure style="flex: 1; min-width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/F1.jpeg" alt="FIFA U17" style="width: 100%; height: 200px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">Championnat U-17</figcaption>
+        </figure>
+        <figure style="flex: 1; min-width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/F2.jpeg" alt="FIFA U17" style="width: 100%; height: 200px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">Championnat U-17</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- CARTE 3 : LIMBÉ (Animée) -->
+    <div class="card element-anime" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 2rem; margin-bottom: 3rem;">
+      <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem;">Tournoi International de Limbé (EFBC)</h3>
+      <p class="meta" style="color: #e94560; font-weight: 600; margin-bottom: 1rem;">Limbé · 14 au 19 décembre 2025</p>
+      <p style="color: #a0a0a0; line-height: 1.8; margin-bottom: 1.5rem;">Arbitre du Tournoi International de Limbé organisé par les Brasseries du Cameroun.</p>
+
+      <div class="carrousel-sport" style="display: flex; overflow-x: auto; gap: 15px; padding-bottom: 10px;">
+        <figure class="item-sport" style="flex: 0 0 auto; width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/L1.jpeg" alt="Limbé" style="width: 100%; height: 180px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">Tournoi de Limbé</figcaption>
+        </figure>
+        <figure class="item-sport" style="flex: 0 0 auto; width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/L2.jpeg" alt="Limbé" style="width: 100%; height: 180px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">Tournoi de Limbé</figcaption>
+        </figure>
+        <figure class="item-sport" style="flex: 0 0 auto; width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/L3.jpeg" alt="Limbé" style="width: 100%; height: 180px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">Tournoi de Limbé</figcaption>
+        </figure>
+        <figure class="item-sport" style="flex: 0 0 auto; width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/L4.jpeg" alt="Limbé" style="width: 100%; height: 180px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">Face au terrain</figcaption>
+        </figure>
+        <figure class="item-sport" style="flex: 0 0 auto; width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/LFF.jpeg" alt="Limbé" style="width: 100%; height: 180px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">Finale des U-14</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- CARTE 4 : JEAN-PIERRE NJIB (Animée) -->
+    <div class="card element-anime" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 2rem; margin-bottom: 3rem;">
+      <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem;">Tournoi Jean-Pierre Njib</h3>
+      <p class="meta" style="color: #e94560; font-weight: 600; margin-bottom: 1rem;">Complexe EFBC · 5 au 10 avril 2026</p>
+      <p style="color: #a0a0a0; line-height: 1.8; margin-bottom: 1.5rem;">Désignée arbitre pour le tournoi Jean-Pierre Njib organisé au complexe de l'EFBC.</p>
+      
+      <div style="display: flex; justify-content: center;">
+        <figure style="margin: 0; background: #fff; padding: 10px; border-radius: 12px; max-width: 400px;">
+          <img src="images/jp.jpeg" alt="Tournoi Njib" style="width: 100%; height: 250px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">Tournoi Jean-Pierre Njip — avril 2026</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- CARTE 5 : WORLD COLA (Animée) -->
+    <div class="card element-anime" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 2rem; margin-bottom: 3rem;">
+      <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem;">World Cola Football Challenge 2026</h3>
+      <p class="meta" style="color: #e94560; font-weight: 600; margin-bottom: 1rem;">Douala · 30 juin au 4 juillet 2026</p>
+      <p style="color: #a0a0a0; line-height: 1.8; margin-bottom: 1.5rem;">Arbitre du championnat World Cola Football Challenge 2026, sur les terrains du Complexe EFBC pour les U-15 et du Stade annexe de Bépanda pour les U-17.</p>
+
+      <div class="carrousel-sport" style="display: flex; overflow-x: auto; gap: 15px; padding-bottom: 10px;">
+        <figure class="item-sport" style="flex: 0 0 auto; width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/W1.jpeg" alt="World Cola" style="width: 100%; height: 180px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">World Cola U-15</figcaption>
+        </figure>
+        <figure class="item-sport" style="flex: 0 0 auto; width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/W2.jpeg" alt="World Cola" style="width: 100%; height: 180px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">World Cola U-17</figcaption>
+        </figure>
+        <figure class="item-sport" style="flex: 0 0 auto; width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/W3.jpeg" alt="World Cola" style="width: 100%; height: 180px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">World Cola U-17</figcaption>
+        </figure>
+        <figure class="item-sport" style="flex: 0 0 auto; width: 250px; margin: 0; background: #fff; padding: 10px; border-radius: 12px;">
+          <img src="images/W4.jpeg" alt="World Cola" style="width: 100%; height: 180px; object-fit: contain;">
+          <figcaption style="text-align: center; color: #333; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">World Cola U-15</figcaption>
+        </figure>
+      </div>
+    </div>
+
+
+  </div>
+
+  <footer style="position: relative; z-index: 10; text-align: center; padding: 2rem; color: #666; margin-top: 4rem;">
+    <p>© 2026 Bikaï Anastazia Rosette — <a href="mailto:rosetteanastazia@gmail.com" style="color: #e94560; text-decoration: none;">rosetteanastazia@gmail.com</a></p>
+  </footer>
+
+  <!-- LE SCRIPT D'ANIMATION EN CASCADE -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const elements = document.querySelectorAll('.element-anime');
+      elements.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add('visible');
+        }, 300 + (index * 500)); // Apparition fluide
+      });
+    });
+  </script>
+
+</body>
+</html>
